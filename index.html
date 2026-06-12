@@ -11,7 +11,40 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="VetNot">
 <link rel="manifest" href="./manifest.json">
-<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');*{box-sizing:border-box;margin:0;padding:0;}body{font-family:'Inter',-apple-system,sans-serif;background:#0a0a0f;color:#e2e8f0;min-height:100vh;padding-bottom:0;}body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 20% 20%,rgba(99,102,241,.15) 0%,transparent 50%),radial-gradient(ellipse at 80% 80%,rgba(16,185,129,.1) 0%,transparent 50%);pointer-events:none;z-index:0;}main{position:relative;z-index:1;max-width:624px;margin:0 auto;padding:10px 8px;}.section-title{font-size:11px;font-weight:700;color:#6366f1;text-transform:uppercase;letter-spacing:.12em;margin:20px 0 10px;display:flex;align-items:center;gap:8px;}.section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(99,102,241,.4),transparent);}.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:20px;backdrop-filter:blur(12px);margin-bottom:12px;padding:20px;overflow:hidden;}.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.06);}.card-title{font-size:13px;font-weight:700;color:#94a3b8;letter-spacing:.02em;display:flex;align-items:center;gap:6px;}label{display:block;font-size:11px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;}.label-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}.label-badge{font-size:11px;font-weight:600;font-family:monospace;background:rgba(99,102,241,.15);color:#818cf8;padding:2px 8px;border-radius:999px;border:1px solid rgba(99,102,241,.2);}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0;}input[type=number]{-moz-appearance:textfield;}input[type=number],input[type=text],select{width:100%;padding:13px 14px;border:1.5px solid rgba(255,255,255,.08);border-radius:12px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:rgba(255,255,255,.05);color:#f1f5f9;outline:none;transition:border-color .2s,background .2s;-webkit-appearance:none;}input[type=number]:focus,input[type=text]:focus,select:focus{border-color:#6366f1;background:rgba(99,102,241,.08);}input::placeholder{color:#475569;}select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 3px center;padding-right:16px;}.exam-container{display:flex;gap:10px;margin-bottom:14px;}.exam-box{flex:1;}.grade-badge{width:68px;height:68px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;border:2px solid;flex-shrink:0;position:relative;overflow:hidden;}.grade-badge::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.15),transparent);border-radius:inherit;}.score-row{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:7px 10px;display:flex;justify-content:space-between;align-items:center;}.score-label{font-size:11px;color:#475569;font-weight:600;text-transform:uppercase;letter-spacing:.04em;}.score-value{font-size:17px;font-family:'Inter',monospace;font-weight:800;color:#f1f5f9;}.cc-box{background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(99,102,241,.05));border:1px solid rgba(99,102,241,.25);border-radius:11px;padding:8px 10px;display:flex;justify-content:space-between;align-items:center;}.cc-label{font-size:11px;font-weight:700;color:#818cf8;text-transform:uppercase;letter-spacing:.04em;}.cc-value{font-size:22px;font-family:'Inter',monospace;font-weight:900;color:#a5b4fc;}.system-badge{font-size:10px;font-weight:700;padding:4px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.06em;}.sys-bagil{background:rgba(99,102,241,.2);color:#818cf8;border:1px solid rgba(99,102,241,.3);}.sys-mutlak{background:rgba(245,158,11,.15);color:#fbbf24;border:1px solid rgba(245,158,11,.25);}.base-table{width:100%;border-collapse:collapse;font-size:10px;}.base-table th{text-align:left;padding:4px 5px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#475569;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.06);}.base-table td{padding:4px 5px;border-bottom:1px solid rgba(255,255,255,.04);}.base-table tr:last-child td{border-bottom:none;}.tr-current{background:rgba(99,102,241,.1) !important;}.pass-badge{display:inline-block;padding:2px 5px;border-radius:999px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;}.pass{background:rgba(16,185,129,.15);color:#34d399;border:1px solid rgba(16,185,129,.2);}.fail{background:rgba(239,68,68,.12);color:#f87171;border:1px solid rgba(239,68,68,.18);}.tbl-grade{display:inline-block;padding:4px 10px;border-radius:6px;font-weight:800;font-size:14px;border:1.5px solid;}.course-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:12px;margin-bottom:8px;transition:border-color .2s;}.course-card:last-child{margin-bottom:0;}.course-card:focus-within{border-color:rgba(99,102,241,.3);}.course-card.ff-card{border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.05);}.course-card.ff-card .input-name{color:#f87171;}.btn-add{background:linear-gradient(135deg,#059669,#10b981);color:white;border:none;padding:9px 14px;border-radius:10px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.04em;box-shadow:0 4px 12px rgba(16,185,129,.3);}.grade-AA{background:rgba(16,185,129,.2);color:#34d399;border-color:rgba(16,185,129,.4);}.grade-BA{background:rgba(52,211,153,.15);color:#6ee7b7;border-color:rgba(52,211,153,.35);}.grade-BB{background:rgba(99,102,241,.2);color:#a5b4fc;border-color:rgba(99,102,241,.4);}.grade-CB{background:rgba(139,92,246,.15);color:#c4b5fd;border-color:rgba(139,92,246,.35);}.grade-CC{background:rgba(245,158,11,.15);color:#fbbf24;border-color:rgba(245,158,11,.35);}.grade-DC{background:rgba(249,115,22,.15);color:#fb923c;border-color:rgba(249,115,22,.3);}.grade-FF{background:rgba(185,28,28,.2);color:#fca5a5;border-color:rgba(185,28,28,.4);}.field + .field{margin-top:12px;}.tab-nav{display:flex;gap:10px;margin-bottom:24px;padding:0;}.tab-btn{flex:1;padding:14px 10px;border:2px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);color:#475569;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;border-radius:16px;cursor:pointer;transition:all .22s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;align-items:center;gap:5px;line-height:1.2;letter-spacing:.01em;}.tab-btn .tab-icon{font-size:22px;line-height:1;}.tab-btn .tab-label{font-size:11px;text-transform:uppercase;letter-spacing:.07em;}.tab-btn:hover{border-color:rgba(99,102,241,.3);color:#94a3b8;background:rgba(99,102,241,.06);}.tab-btn.active{border-color:#6366f1;background:linear-gradient(135deg,rgba(99,102,241,.22),rgba(99,102,241,.08));color:#a5b4fc;box-shadow:0 0 0 1px rgba(99,102,241,.2),0 4px 16px rgba(99,102,241,.15);}.tab-btn.active .tab-icon{filter:drop-shadow(0 0 6px rgba(99,102,241,.6));}
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+:root{
+  --accent:#6366f1;
+  --accent-soft:#818cf8;
+  --accent-glow:rgba(99,102,241,.35);
+  --bg:#090910;
+  --card-bg:rgba(255,255,255,.045);
+  --card-bg-strong:rgba(255,255,255,.065);
+  --card-border:rgba(255,255,255,.09);
+  --card-border-strong:rgba(255,255,255,.14);
+  --text:#f1f5f9;
+  --text-dim:#94a3b8;
+  --text-faint:#64748b;
+  --success:#10b981;
+  --success-soft:#34d399;
+  --warn:#f59e0b;
+  --danger:#ef4444;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:0;}
+body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 15% 10%,rgba(99,102,241,.16) 0%,transparent 55%),radial-gradient(ellipse at 85% 90%,rgba(16,185,129,.09) 0%,transparent 55%),radial-gradient(ellipse at 50% 50%,rgba(139,92,246,.05) 0%,transparent 70%);pointer-events:none;z-index:0;}
+main{position:relative;z-index:1;max-width:624px;margin:0 auto;padding:10px 8px;}
+.section-title{font-size:11px;font-weight:700;color:var(--accent-soft);text-transform:uppercase;letter-spacing:.14em;margin:20px 0 10px;display:flex;align-items:center;gap:8px;}
+.section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--accent-glow),transparent);}
+.section-title svg{width:14px;height:14px;flex-shrink:0;stroke:var(--accent-soft);}
+.card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:20px;backdrop-filter:blur(12px);margin-bottom:12px;padding:20px;overflow:hidden;box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 8px 24px rgba(0,0,0,.25);}
+.card.card-strong{background:var(--card-bg-strong);border-color:var(--card-border-strong);}
+.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.06);}
+.card-title{font-size:13px;font-weight:700;color:var(--text-dim);letter-spacing:.02em;display:flex;align-items:center;gap:6px;}
+.card-title svg,.icon{width:14px;height:14px;flex-shrink:0;vertical-align:-2px;}label{display:block;font-size:11px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;}.label-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}.label-badge{font-size:11px;font-weight:600;font-family:monospace;background:rgba(99,102,241,.15);color:#818cf8;padding:2px 8px;border-radius:999px;border:1px solid rgba(99,102,241,.2);}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0;}input[type=number]{-moz-appearance:textfield;}input[type=number],input[type=text],select{width:100%;padding:13px 14px;border:1.5px solid rgba(255,255,255,.08);border-radius:12px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;background:rgba(255,255,255,.05);color:#f1f5f9;outline:none;transition:border-color .2s,background .2s;-webkit-appearance:none;}input[type=number]:focus,input[type=text]:focus,select:focus{border-color:#6366f1;background:rgba(99,102,241,.08);}input::placeholder{color:#475569;}select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 3px center;padding-right:16px;}.exam-container{display:flex;gap:10px;margin-bottom:14px;}.exam-box{flex:1;}.grade-badge{width:68px;height:68px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;border:2px solid;flex-shrink:0;position:relative;overflow:hidden;}.grade-badge::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.15),transparent);border-radius:inherit;}.score-row{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:7px 10px;display:flex;justify-content:space-between;align-items:center;}.score-label{font-size:11px;color:#475569;font-weight:600;text-transform:uppercase;letter-spacing:.04em;}.score-value{font-size:17px;font-family:'Inter',monospace;font-weight:800;color:#f1f5f9;}.cc-box{background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(99,102,241,.05));border:1px solid rgba(99,102,241,.25);border-radius:11px;padding:8px 10px;display:flex;justify-content:space-between;align-items:center;}.cc-label{font-size:11px;font-weight:700;color:#818cf8;text-transform:uppercase;letter-spacing:.04em;}.cc-value{font-size:22px;font-family:'Inter',monospace;font-weight:900;color:#a5b4fc;}.system-badge{font-size:10px;font-weight:700;padding:4px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.06em;}.sys-bagil{background:rgba(99,102,241,.2);color:#818cf8;border:1px solid rgba(99,102,241,.3);}.sys-mutlak{background:rgba(245,158,11,.15);color:#fbbf24;border:1px solid rgba(245,158,11,.25);}.base-table{width:100%;border-collapse:collapse;font-size:10px;}.base-table th{text-align:left;padding:4px 5px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#475569;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.06);}.base-table td{padding:4px 5px;border-bottom:1px solid rgba(255,255,255,.04);}.base-table tr:last-child td{border-bottom:none;}.tr-current{background:rgba(99,102,241,.1) !important;}.pass-badge{display:inline-block;padding:2px 5px;border-radius:999px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;}.pass{background:rgba(16,185,129,.15);color:#34d399;border:1px solid rgba(16,185,129,.2);}.fail{background:rgba(239,68,68,.12);color:#f87171;border:1px solid rgba(239,68,68,.18);}.tbl-grade{display:inline-block;padding:4px 10px;border-radius:6px;font-weight:800;font-size:14px;border:1.5px solid;}.course-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:12px;margin-bottom:8px;transition:border-color .2s;}.course-card:last-child{margin-bottom:0;}.course-card:focus-within{border-color:rgba(99,102,241,.3);}.course-card.ff-card{border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.05);}.course-card.ff-card .input-name{color:#f87171;}.btn-add{background:linear-gradient(135deg,#059669,#10b981);color:white;border:none;padding:9px 14px;border-radius:10px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.04em;box-shadow:0 4px 12px rgba(16,185,129,.3);}.grade-AA{background:rgba(16,185,129,.2);color:#34d399;border-color:rgba(16,185,129,.4);}.grade-BA{background:rgba(52,211,153,.15);color:#6ee7b7;border-color:rgba(52,211,153,.35);}.grade-BB{background:rgba(99,102,241,.2);color:#a5b4fc;border-color:rgba(99,102,241,.4);}.grade-CB{background:rgba(139,92,246,.15);color:#c4b5fd;border-color:rgba(139,92,246,.35);}.grade-CC{background:rgba(245,158,11,.15);color:#fbbf24;border-color:rgba(245,158,11,.35);}.grade-DC{background:rgba(249,115,22,.15);color:#fb923c;border-color:rgba(249,115,22,.3);}.grade-FF{background:rgba(185,28,28,.2);color:#fca5a5;border-color:rgba(185,28,28,.4);}.field + .field{margin-top:12px;}.tab-nav{display:flex;gap:10px;margin-bottom:24px;padding:0;}.tab-btn{flex:1;padding:14px 10px;border:2px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);color:#475569;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;border-radius:16px;cursor:pointer;transition:all .22s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;align-items:center;gap:5px;line-height:1.2;letter-spacing:.01em;}.tab-btn .tab-icon{width:22px;height:22px;line-height:1;stroke-width:2;}.tab-btn .tab-label{font-size:11px;text-transform:uppercase;letter-spacing:.07em;}.tab-btn:hover{border-color:rgba(99,102,241,.3);color:#94a3b8;background:rgba(99,102,241,.06);}.tab-btn.active{border-color:#6366f1;background:linear-gradient(135deg,rgba(99,102,241,.22),rgba(99,102,241,.08));color:#a5b4fc;box-shadow:0 0 0 1px rgba(99,102,241,.2),0 4px 16px rgba(99,102,241,.15);}.tab-btn.active .tab-icon{filter:drop-shadow(0 0 6px rgba(99,102,241,.6));}
+.result-glow{position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(16,185,129,.18),rgba(6,182,212,.1),rgba(99,102,241,.08));border:1px solid rgba(16,185,129,.3);border-radius:18px;box-shadow:0 0 28px rgba(16,185,129,.1),0 8px 24px rgba(0,0,0,.3);}
+.grade-badge.grade-FF{box-shadow:0 0 18px rgba(239,68,68,.25);}
+.grade-badge:not(.grade-FF){box-shadow:0 0 14px rgba(99,102,241,.12);}
 .autocomplete-wrapper{position:relative;}
 .autocomplete-list{position:absolute;top:calc(100% + 4px);left:0;right:0;background:#1e1e2e;border:1px solid rgba(99,102,241,.35);border-radius:12px;z-index:999;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.5);max-height:200px;overflow-y:auto;}
 .autocomplete-item{padding:10px 14px;font-size:13px;font-weight:600;color:#c4b5fd;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.05);transition:background .15s;}
@@ -30,7 +63,7 @@
 .tab-btn{transition:all .18s ease;}
 .tab-btn:active{transform:scale(.96);}
 .tab-content-active{animation:tabIn .22s ease both;}
-.section-title{background:linear-gradient(90deg,#6366f1,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.section-title span.st-text{background:linear-gradient(90deg,#6366f1,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 #gano-total.pop,.score-value.pop,.cc-value.pop{animation:numberPop .25s ease;}
 .btn-add{transition:transform .15s ease,box-shadow .15s ease;}
 .btn-add:hover{transform:scale(1.04);box-shadow:0 4px 14px rgba(16,185,129,.4);}
@@ -43,7 +76,7 @@
   /* Tab nav daha kompakt */
   .tab-nav{margin-bottom:8px;gap:5px;}
   .tab-btn{padding:7px 4px;}
-  .tab-btn .tab-icon{font-size:18px;}
+  .tab-btn .tab-icon{width:18px;height:18px;}
   .tab-btn .tab-label{font-size:9px;letter-spacing:.04em;}
 
   /* Section title'ı sıkıştır */
@@ -131,7 +164,7 @@
 </head>
 <body>
 <div id="install-banner">
-  <span>📲</span>
+  <i data-lucide="smartphone" style="width:20px;height:20px;flex-shrink:0;"></i>
   <div class="install-text">
     <div class="install-title">Ana Ekrana Ekle</div>
     <div class="install-sub">VetNot'u uygulama gibi kullan</div>
@@ -147,23 +180,23 @@
 <main>
   <div class="tab-nav">
     <button class="tab-btn active" id="btn-not" onclick="switchTab('not')">
-      <span class="tab-icon">📊</span>
+      <i data-lucide="bar-chart-3" class="tab-icon"></i>
       <span class="tab-label">Not Hesaplama</span>
     </button>
     <button class="tab-btn" id="btn-gano" onclick="switchTab('gano')">
-      <span class="tab-icon">🎓</span>
+      <i data-lucide="graduation-cap" class="tab-icon"></i>
       <span class="tab-label">GANO Hesaplama</span>
     </button>
   </div>
   <div id="tab-not">
-  <div class="section-title">📊 Bağıl Değerlendirme Hesaplayıcı</div>
+  <div class="section-title"><i data-lucide="bar-chart-3"></i><span class="st-text">Bağıl Değerlendirme Hesaplayıcı</span></div>
   <!-- Ana grid: Sınıf Parametreleri + Öğrenci Not Girişi yan yana, altında Harf Notu -->
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;align-items:start;margin-bottom:6px;" id="top-row-grid">
 
   <!-- SOL: Sınıf Parametreleri + Hedef Not -->
   <div style="display:flex;flex-direction:column;gap:5px;">
-  <div class="card" style="margin-bottom:0;padding:14px;">
-    <div class="card-title" style="margin-bottom:8px;font-size:11px;">📐 Sınıf Parametreleri</div>
+  <div class="card card-strong" style="margin-bottom:0;padding:14px;">
+    <div class="card-title" style="margin-bottom:8px;font-size:11px;"><i data-lucide="ruler"></i> Sınıf Parametreleri</div>
     <div class="field">
       <div class="label-row">
         <label for="mu" style="font-size:9px;margin-bottom:5px;">Sınıf Ham Başarı Ortalaması (µ)</label>
@@ -182,8 +215,8 @@
     <!-- Gelişmiş Seçenekler Toggle -->
     <div style="margin-top:10px;">
       <button onclick="toggleAdvanced()" id="adv-toggle-btn" style="width:100%;padding:6px 10px;border:1.5px dashed rgba(99,102,241,.3);background:rgba(99,102,241,.05);color:#6366f1;border-radius:9px;font-size:9px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:space-between;letter-spacing:.06em;text-transform:uppercase;font-family:'Inter',sans-serif;">
-        <span>⚙️ Gelişmiş Seçenekler</span>
-        <span id="adv-toggle-arrow" style="transition:transform .25s;">▼</span>
+        <span style="display:flex;align-items:center;gap:5px;"><i data-lucide="settings-2" style="width:11px;height:11px;"></i> Gelişmiş Seçenekler</span>
+        <span id="adv-toggle-arrow" style="display:inline-flex;transition:transform .25s;"><i data-lucide="chevron-down" style="width:12px;height:12px;"></i></span>
       </button>
       <div id="adv-options" style="display:none;margin-top:7px;padding:10px;background:rgba(99,102,241,.05);border:1px solid rgba(99,102,241,.15);border-radius:9px;">
         <!-- T-Skoru Manuel Giriş (Gelişmiş) -->
@@ -206,7 +239,7 @@
   <!-- Hedef Not Hesaplayıcı (küçük) -->
   <div class="card" style="margin-bottom:0;padding:5px 8px;">
     <div style="display:flex;align-items:center;gap:6px;">
-      <span style="font-size:9px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap;">🎯 Hedef:</span>
+      <span style="font-size:9px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap;display:flex;align-items:center;gap:4px;"><i data-lucide="target" style="width:11px;height:11px;"></i> Hedef:</span>
       <select id="hedef-grade" onchange="calcHedef()" style="flex:1;padding:3px 6px;font-size:11px;border-radius:7px;">
         <option value="AA">AA</option>
         <option value="BA">BA</option>
@@ -225,8 +258,8 @@
   <div style="display:flex;flex-direction:column;gap:5px;">
 
     <!-- Öğrenci Not Girişi -->
-    <div class="card" style="margin-bottom:0;">
-      <div class="card-title" style="margin-bottom:7px;">🎓 Öğrenci Not Girişi</div>
+    <div class="card card-strong" style="margin-bottom:0;">
+      <div class="card-title" style="margin-bottom:7px;"><i data-lucide="pencil-line"></i> Öğrenci Not Girişi</div>
       <div class="exam-container" style="flex-wrap:nowrap;gap:6px;">
         <div class="exam-box" style="min-width:0;flex:1;">
           <label for="vize" style="font-size:9px;white-space:nowrap;">Vize (%40)</label>
@@ -272,7 +305,7 @@
   </div><!-- /top-row-grid -->
 
   <div class="card" style="padding: 5px;">
-    <div class="card-title" id="table-title" style="padding: 4px 5px 0; margin-bottom: 4px;">Tam Harf Notu Tablosu</div>
+    <div class="card-title" id="table-title" style="padding: 4px 5px 0; margin-bottom: 4px;"><i data-lucide="table-2"></i> <span id="table-title-text">Tam Harf Notu Tablosu</span></div>
     <table class="base-table" style="font-size:10px;">
       <thead>
         <tr>
@@ -287,14 +320,14 @@
   </div><!-- end tab-not -->
 
   <div id="tab-gano" class="tab-content" style="display:none;">
-  <div class="section-title" style="margin:6px 0 6px;">🎓 Dönem GANO Hesaplama</div>
+  <div class="section-title" style="margin:6px 0 6px;"><i data-lucide="graduation-cap"></i><span class="st-text">Dönem GANO Hesaplama</span></div>
 
   <!-- GANO Sonucu - her zaman üstte -->
-  <div style="position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(16,185,129,.2),rgba(6,182,212,.12),rgba(99,102,241,.1));border:1px solid rgba(16,185,129,.35);border-radius:14px;padding:10px 14px;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 0 24px rgba(16,185,129,.12),0 4px 16px rgba(0,0,0,.3);">
+  <div class="result-glow" style="padding:10px 14px;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between;">
     <div style="position:absolute;top:-20px;left:-20px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(16,185,129,.2),transparent 70%);pointer-events:none;"></div>
     <div style="position:absolute;bottom:-30px;right:60px;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle,rgba(6,182,212,.15),transparent 70%);pointer-events:none;"></div>
     <div>
-      <div style="font-size:9px;font-weight:700;color:#6ee7b7;text-transform:uppercase;letter-spacing:.12em;margin-bottom:2px;">🎓 Dönem Ortalaması</div>
+      <div style="font-size:9px;font-weight:700;color:#6ee7b7;text-transform:uppercase;letter-spacing:.12em;margin-bottom:2px;display:flex;align-items:center;gap:4px;"><i data-lucide="award" style="width:11px;height:11px;"></i> Dönem Ortalaması</div>
       <div style="font-size:30px;font-weight:900;color:#34d399;font-family:'Inter',monospace;line-height:1;text-shadow:0 0 20px rgba(52,211,153,.4);" id="gano-total">0.0000</div>
     </div>
     <div style="text-align:right;">
@@ -306,8 +339,8 @@
   <!-- Ders Listesi - scroll'lu sabit alan -->
   <div class="card" style="padding:6px;">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px;">
-      <div class="card-title" style="font-size:11px;">Ders Listesi</div>
-      <button class="btn-add" onclick="addCourseRow('', 1, '4')" style="padding:5px 10px;font-size:10px;border-radius:8px;">+ Ders Ekle</button>
+      <div class="card-title" style="font-size:11px;"><i data-lucide="list"></i> Ders Listesi</div>
+      <button class="btn-add" onclick="addCourseRow('', 1, '4')" style="padding:5px 10px;font-size:10px;border-radius:8px;display:flex;align-items:center;gap:4px;"><i data-lucide="plus" style="width:11px;height:11px;"></i> Ders Ekle</button>
     </div>
     <div id="gano-list-container" style="display:flex;flex-direction:column;gap:4px;"></div>
   </div>
@@ -484,13 +517,13 @@ function update(){
     grade = "FF";
     modeBadge.textContent = "Bağıl Sistem";
     modeBadge.className = "system-badge sys-bagil";
-    document.getElementById("table-title").textContent = "Bağıl Harf Notu Tablosu";
+    document.getElementById("table-title-text").textContent = "Bağıl Harf Notu Tablosu";
     document.getElementById("cc-min").textContent = "—";
   } else if (isMutlak) {
     grade = getMutlakGrade(hbn);
     modeBadge.textContent = "Mutlak Sistem";
     modeBadge.className = "system-badge sys-mutlak";
-    document.getElementById("table-title").textContent = "Mutlak Harf Notu Tablosu (Ortalama ≥ 70)";
+    document.getElementById("table-title-text").textContent = "Mutlak Harf Notu Tablosu (Ortalama ≥ 70)";
     document.getElementById("cc-min").textContent = "60.00";
   } else {
     if(hbn < 45) {
@@ -501,7 +534,7 @@ function update(){
     }
     modeBadge.textContent = "Bağıl Sistem";
     modeBadge.className = "system-badge sys-bagil";
-    document.getElementById("table-title").textContent = "Bağıl Harf Notu Tablosu";
+    document.getElementById("table-title-text").textContent = "Bağıl Harf Notu Tablosu";
     var esikCC = getTablo3Esik(mu)[4];
     var ccMinHbn = muHesap + ((esikCC - 50) / 10) * sigma;
     document.getElementById("cc-min").textContent = ccMinHbn.toFixed(2);
@@ -921,6 +954,9 @@ window.addEventListener('appinstalled', function() {
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js', {scope: './'}).catch(function(){});
 }
+
+// ── Lucide Icons ──
+if (window.lucide) { lucide.createIcons(); }
 </script>
 </body>
 </html>

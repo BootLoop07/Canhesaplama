@@ -316,6 +316,14 @@ main{position:relative;z-index:1;max-width:624px;margin:0 auto;padding:10px 8px;
       </thead>
       <tbody id="grade-table" style="font-size:10px;"></tbody>
     </table>
+    <a href="https://t.me/+8ZfPnWyMdDplYzc0" target="_blank" rel="noopener noreferrer"
+       style="display:flex;align-items:center;gap:8px;margin-top:10px;padding:8px 12px;background:#1a2a3a;border:1px solid #0e4d78;border-radius:10px;text-decoration:none;transition:background 0.2s;"
+       onmouseover="this.style.background='#1e3448'" onmouseout="this.style.background='#1a2a3a'">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#29a8e0">
+        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 13.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/>
+      </svg>
+      <span style="color:#29a8e0;font-size:12px;font-weight:600;letter-spacing:0.01em;">Öğrenci Notu Paylaşım Grubu</span>
+    </a>
   </div>
   </div><!-- end tab-not -->
 
@@ -573,23 +581,23 @@ function update(){
     var hbnFromT = function(tv) { return muHesap + ((tv - 50) / 10) * sigma; };
     // [AA_alt, BA_alt, BB_alt, CB_alt, CC_alt, DC_alt]
     var bagilRows = [
-      {g:"AA", minT:esik[0], p:true},
-      {g:"BA", minT:esik[1], p:true},
-      {g:"BB", minT:esik[2], p:true},
-      {g:"CB", minT:esik[3], p:true},
-      {g:"CC", minT:esik[4], p:true},
-      {g:"DC", minT:esik[5], p:false},
-      {g:"FF", minT:-Infinity, p:false}
+      {g:"AA", minT:esik[0], maxT:Infinity,  p:true},
+      {g:"BA", minT:esik[1], maxT:esik[0]-1, p:true},
+      {g:"BB", minT:esik[2], maxT:esik[1]-1, p:true},
+      {g:"CB", minT:esik[3], maxT:esik[2]-1, p:true},
+      {g:"CC", minT:esik[4], maxT:esik[3]-1, p:true},
+      {g:"DC", minT:esik[5], maxT:esik[4]-1, p:false},
+      {g:"FF", minT:-Infinity,maxT:esik[5]-1, p:false}
     ];
     var html = "";
     for(var i=0; i<bagilRows.length; i++){
       var r = bagilRows[i];
       var minH = r.minT === -Infinity ? 0 : Math.max(0, hbnFromT(r.minT));
-      var maxH = i === 0 ? 100 : Math.min(100, hbnFromT(bagilRows[i-1].minT) - 0.01);
+      var maxH = r.maxT === Infinity ? 100 : Math.min(100, hbnFromT(r.maxT));
       var isFF = r.g === "FF";
       html += '<tr class="' + (r.g === grade ? 'tr-current' : '') + '">' +
         '<td><span class="tbl-grade ' + GRADE_COLORS[r.g] + '">' + r.g + '</span></td>' +
-        '<td style="font-family:monospace;color:#94a3b8;font-size:12px;text-align:center;">' + (isFF ? '0.00' : minH.toFixed(2)) + ' – ' + maxH.toFixed(2) + '</td>' +
+        '<td style="font-family:monospace;color:#94a3b8;font-size:12px;text-align:center;">' + (isFF ? '0.0' : minH.toFixed(1)) + ' – ' + maxH.toFixed(1) + '</td>' +
         '<td style="text-align:right;"><span class="pass-badge ' + (r.p?'pass':'fail') + '">' + (r.p?'Geçer':'Kalır') + '</span></td>' +
       '</tr>';
     }

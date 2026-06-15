@@ -338,9 +338,15 @@ main{position:relative;z-index:1;max-width:624px;margin:0 auto;padding:10px 8px;
       <div style="font-size:9px;font-weight:700;color:#6ee7b7;text-transform:uppercase;letter-spacing:.12em;margin-bottom:2px;display:flex;align-items:center;gap:4px;"><i data-lucide="award" style="width:11px;height:11px;"></i> Dönem Ortalaması</div>
       <div style="font-size:30px;font-weight:900;color:#34d399;font-family:'Inter',monospace;line-height:1;text-shadow:0 0 20px rgba(52,211,153,.4);" id="gano-total">0.0000</div>
     </div>
-    <div style="text-align:right;">
-      <div style="font-size:9px;font-weight:700;color:#67e8f9;text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px;">Toplam Kredi</div>
-      <div style="font-size:22px;font-weight:900;color:#67e8f9;font-family:'Inter',monospace;text-shadow:0 0 16px rgba(103,232,249,.3);" id="gano-credits">0</div>
+    <div style="text-align:right;display:flex;flex-direction:column;gap:6px;align-items:flex-end;">
+      <div>
+        <div style="font-size:9px;font-weight:700;color:#67e8f9;text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px;">Toplam Kredi</div>
+        <div style="font-size:22px;font-weight:900;color:#67e8f9;font-family:'Inter',monospace;text-shadow:0 0 16px rgba(103,232,249,.3);" id="gano-credits">0</div>
+      </div>
+      <div>
+        <div style="font-size:9px;font-weight:700;color:#a78bfa;text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px;">Verilen Kredi</div>
+        <div style="font-size:18px;font-weight:800;color:#a78bfa;font-family:'Inter',monospace;text-shadow:0 0 12px rgba(167,139,250,.3);" id="gano-passed-credits">0</div>
+      </div>
     </div>
   </div>
 
@@ -850,12 +856,24 @@ function calcGANO() {
   }
   nonFF.forEach(function(c){ container.appendChild(c); });
   ffCards.forEach(function(c){ container.appendChild(c); });
+  var passedCredits = 0;
+  for(var j=0; j<cards.length; j++){
+    var cSel = cards[j].querySelector(".input-credit");
+    var gSel = cards[j].querySelector(".select-grade");
+    if(cSel && gSel && gSel.value !== "0"){
+      passedCredits += parseFloat(cSel.value) || 0;
+    }
+  }
   var gano = totalCredits > 0 ? (totalPoints / totalCredits) : 0;
   var totalDisplay = document.getElementById("gano-total");
   if(totalDisplay) { totalDisplay.textContent = gano.toFixed(4); popEl('gano-total'); }
   var creditsDisplay = document.getElementById("gano-credits");
   if(creditsDisplay) {
     creditsDisplay.textContent = totalCredits % 1 === 0 ? totalCredits : totalCredits.toFixed(1);
+  }
+  var passedDisplay = document.getElementById("gano-passed-credits");
+  if(passedDisplay) {
+    passedDisplay.textContent = passedCredits % 1 === 0 ? passedCredits : passedCredits.toFixed(1);
   }
   saveToLocalStorage();
 }
